@@ -7,7 +7,7 @@
 \*------------------------------------*/
 
 :root {
-    
+
 }
 
 /* CSS variables here */
@@ -187,11 +187,7 @@ a:focus {
     padding: 24px 24px 0;
 }
 
-.o-row--header {
-    padding: 48px 24px 0;
-}
-
-.o-row--body {
+.o-row--login {
     /* stuff here to align the card */
 }
 
@@ -211,16 +207,6 @@ a:focus {
     .o-row {
         padding-left: 48px;
         padding-right: 48px;
-    }
-
-    .o-row--md {
-        padding-top: 48px;
-        padding-bottom: 24px;
-    }
-
-    .o-row--lg {
-        padding-top: 72px;
-        padding-bottom: 48px;
     }
 }
 
@@ -445,18 +431,6 @@ a:focus {
     ---
     Website main logo
 */
-
-/*
-    Component: header
-    ---
-    Main header of the website
-*/
-
-.c-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /*
     Component: Card
