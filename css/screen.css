@@ -474,59 +474,6 @@ a:focus {
 }
 
 /*
-    Custom option
-    ---
-    Custom checkboxes & radio buttons
-*/
-
-.c-custom-option {
-
-}
-
-/* Hide the actual input but still be able to focus on it */
-.c-custom-option__input {
-
-}
-
-.c-custom-option__label {
-
-}
-
-.c-custom-option__fake-option {
-
-}
-
-.c-custom-option__symbol {
-    /* Hide the svg initially */
-}
-
-/* focused state */
-
-.c-custom-option__input:focus + .c-custom-option__label .c-custom-option__fake-option {
-
-}
-
-/* checked state */
-
-.c-custom-option__input:checked + .c-custom-option__label .c-custom-option__fake-option {
-
-}
-
-.c-custom-option__input:checked + .c-custom-option__label .c-custom-option__symbol {
-    /* Show the svg when the invisible checkbox is checked */
-}
-
-.c-custom-option__input:checked + .c-custom-option__label .c-custom-option__path {
-
-}
-
-/* focused & checked state */
-
-.c-custom-option__input:focus:checked + .c-custom-option__label .c-custom-option__fake-option {
-
-}
-
-/*
     Component: Button
     ---
     Class to put on form buttons or links
