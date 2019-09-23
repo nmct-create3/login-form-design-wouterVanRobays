@@ -1,7 +1,18 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
-
+@font-face {
+    font-family: 'Inter Web';
+    font-weight: 400;
+    font-display: swap; /* zorgt voor een correcte omwisseling als het font geladen is */
+    src: url('../fonts/Inter-Regular.woff2');
+}
+@font-face {
+    font-family: 'Inter Web';
+    font-weight: 600;
+    font-display: swap; /* zorgt voor een correcte omwisseling als het font geladen is */
+    src: url('../fonts/Inter-Medium.woff2');
+}
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -25,12 +36,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: 'Inter Web', 'Comic Sans MS', Helvetica, arial, sans-serif;
+    color: #20223A;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -47,13 +58,13 @@ html {
 */
 
 ::-moz-selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +169,22 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #2E77E6;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #4F95FF;
+}
+
+label, input {
+    display: block;
 }
 
 /*------------------------------------*\
@@ -431,40 +446,61 @@ a:focus {
     ---
     Website main logo
 */
+.c-logo{
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+.c-logo__symbol {
+    height: 100%;
+    display: block;
+}
+.c-logo__path--1 {
+    fill:#20223a;
+}
+
+.c-logo__path--2 {
+    fill:#3385ff;
+}
+
+.c-logo__path--3 {
+    fill:#1b4186;
+}
 
 /*
     Component: Card
     ---
     Card with box shadow
 */
+.c-card {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px #E7E8EB;
+}
+
+.c-card__body {
+    padding: 48px 48px 0px 48px;
+}
+
+.c-card__title {
+    text-align: center;
+    padding-top: 48px;
+}
+
+.c-card__footer {
+    border-top: 1px solid #E2E3E7;
+    padding: 24px 48px;
+}
 
 /*
     Component: Forms
     ---
     Everything form related here
 */
-
-/*
-    Component: Input
-    ---
-    Class to put on all input="text" like form inputs
-*/
-
-.c-input {
-
-}
-
-.c-input:focus {
-}
-
-/*
-    Component: Label
-    ---
-    Class to put on all form labels
-*/
-
-.c-label {
-
+.c-form-field--option {
+    display: flex;
+    align-items: center;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
@@ -474,25 +510,82 @@ a:focus {
 }
 
 /*
+    Component: Input
+    ---
+    Class to put on all input="text" like form inputs
+*/
+
+.c-input {
+    appearance: none;
+    width: 100%;
+    border: 1px solid #E2E3E7;
+    border-radius: 4px;
+    font-family: inherit;
+    font-style: 16px;
+    line-height: 24px;
+    color: #20223A;
+    padding: 11px 16px; /* Verticaal 11 + 1 + 24 + 1 + 11 + 1 */
+    -webkit-appearance: none; /* Moet wel een prefix hebben! */
+    outline: none;
+}
+
+.c-input:focus {
+    border-color: #3385FF;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385ff4d; 
+}
+
+/*
+    Component: Label
+    ---
+    Class to put on all form labels
+*/
+
+.c-label {
+    font-style: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #606274;
+
+}
+
+.c-label--option {
+    margin-left: 8px;
+}
+
+/*
     Component: Button
     ---
     Class to put on form buttons or links
 */
 
 .c-button {
-
+    width: 100%;
+    background-color: #3385FF;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    line-height: 24px;
+    padding: 11px 0;
+    border-radius: 3px;
+    text-align: center;
+    transition: all .1s ease-out;
+    outline: none;
+    border: 1px solid #2E77E6;
 }
 
 .c-button:hover {
-
+    background-color: #4F65FF;
 }
 
 .c-button:focus {
-
+    background-color: #3385FF;
+    box-shadow: 0 0 0 3px #3385FF4d;
 }
 
 .c-button:active {
-
+    box-shadow: none;
+    background-color: #2E77E6;
 }
 
 .c-button--block {
