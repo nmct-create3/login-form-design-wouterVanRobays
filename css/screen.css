@@ -511,7 +511,7 @@ label, input {
 */
 .c-card {
     background-color: var(--card-background-color);
-    margin-bottom: 24px;
+    margin-bottom: var(--global-whitespace-md);
     border-radius: var(--radius);
     /*box shadow: x-as y-as blue spread color*/
     box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.075);
